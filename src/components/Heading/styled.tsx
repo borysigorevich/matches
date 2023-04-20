@@ -16,7 +16,7 @@ export const League = styled.h1`
 `;
 
 export const GameStatus = styled.h2<GameStatusProps>`
-	color: ${({ color, theme }) => theme[color] || '#fff'};
+	color: ${({ color, theme }) => theme[color || 'white'] || '#fff'};
 	font-weight: 400;
 `;
 

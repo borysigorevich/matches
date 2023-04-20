@@ -20,6 +20,7 @@ export const GameCard: React.FC<GameCardProps> = ({ game }) => {
 		<GameWrapper onClick={handleOpenModal}>
 			<Country>{game.country}</Country>
 			<League>{game.competition}</League>
+			{/*@ts-ignore*/}
 			<GameStatus color={StatusColorConfig[game.status.type]}>
 				{game.status.type}
 			</GameStatus>

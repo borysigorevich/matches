@@ -24,6 +24,7 @@ const theme = {
 	red: 'rgb(218, 119, 130)',
 	'light-dark': 'rgb(128, 128, 128)',
 	background: 'rgb(61, 61, 61)',
+	white: 'rgb(255, 255, 255)'
 };
 
 export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {

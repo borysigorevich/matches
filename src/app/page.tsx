@@ -11,7 +11,7 @@ export default function Home() {
 	const dispatch = useDispatch();
 	const isModalOpen = useAppSelector('isModalOpen');
 
-	const [matches] = React.useState<GameType[]>(() => matchesData);
+	const [matches] = React.useState<GameType[]>(() => matchesData as GameType[]);
 	const [filteredMatches, setFilteredMatches] = React.useState(matches);
 	const [filters, setFilters] = React.useState<StatusType[]>([]);
 
@@ -25,7 +25,7 @@ export default function Home() {
 
 	React.useEffect(() => {
 		const listener = (event: KeyboardEvent) => {
-			if (event.key === 'Escape' && open) {
+			if (event.key === 'Escape' && isModalOpen) {
 				if (isModalOpen) dispatch(clearGameActionCreator());
 				document.body.style.overflow = 'auto';
 			}

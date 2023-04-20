@@ -19,6 +19,7 @@ export const Heading: React.FC<HeadingProps> = ({
 	time,
 	open,
 }) => {
+	//@ts-ignore
 	const configuredStatus = StatusTypeConfig[status];
 	const newDate = new Date(date as string).toLocaleDateString('en-US', {
 		month: 'short',
@@ -30,7 +31,7 @@ export const Heading: React.FC<HeadingProps> = ({
 		<HeadingWrapper>
 			<Country open={open}>{country}</Country>
 			<League>{competition}</League>
-
+			{/*@ts-ignore*/}
 			<GameStatus color={StatusColorConfig[status]}>
 				{configuredStatus || normalizedDate}
 			</GameStatus>

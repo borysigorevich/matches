@@ -13,8 +13,8 @@ export type ContextProviderProps = {
 	children: React.ReactNode;
 };
 
-type SetGameActionType = { type: typeof SET_GAME; payload: GameType };
-type ClearGameActionType = { type: typeof CLEAR_GAME };
+export type SetGameActionType = { type: typeof SET_GAME; payload: GameType };
+export type ClearGameActionType = { type: typeof CLEAR_GAME };
 
 export type ContextType = {
 	state: StateType;
